@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+[v-cloak] {
+  display: none;
+}
+
+.audio {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto 10px;
+  font-size: 20px;
+  text-wrap: nowrap;
+}
+
+.audio .play {
+  height: 40px;
+}
+
+.container {
+  width: 540px;
+  height: 540px;
+  background: #98d3fc
+    url("https://www.jq22.com/demo/vue-luck-draw-pdmm202010260015/img/bg.a4b976d5.png")
+    no-repeat center / 100% 100%;
+  /*background: conic-gradient( 
+   red 6deg, orange 6deg 18deg, yellow 18deg 45deg, 
+   green 45deg 110deg, blue 110deg 200deg, purple 200deg);*/
+  margin: auto;
+  position: relative;
+}
+
+.prize-list {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 10px solid #98d3fc;
+  overflow: hidden;
+}
+
+.prize-item {
+  /*border: 2px solid red;*/
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10px;
+  margin: auto;
+}
+
+.prize-item img {
+  width: 30%;
+  height: 20%;
+  margin: 40px auto 10px;
+  display: block;
+}
+
+.prize-item p {
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  line-height: 20px;
+}
+
+.btn {
+  width: 160px;
+  height: 160px;
+  background: url("https://www.jq22.com/demo/jquerylocal201912122316/img/btn_lottery.png")
+    no-repeat center / 100% 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  cursor: pointer;
+}
+
+.btn::before {
+  content: "";
+  width: 41px;
+  height: 39px;
+  background: url("https://www.jq22.com/demo/jquerylocal201912122316/img/icon_point.png")
+    no-repeat center / 100% 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -33px;
+  margin: auto;
+}
+
+/* 媒体查询，适用于平板和移动设备 */
+@media screen and (max-width: 768px) {
+  .audio {
+    font-size: 16px;
+    text-wrap: nowrap;
+  }
+  .container {
+    scale: 0.8;
+  }
+  .btn {
+    scale: 0.8;
+  }
+  .btn ::before {
+    scale: 0.8;
+  }
+}
+
+/* 媒体查询，适用于小屏幕移动设备 */
+@media screen and (max-width: 480px) {
+  .audio {
+    font-size: 12px;
+    text-wrap: nowrap;
+  }
+  .container {
+    scale: 0.5;
+  }
+  .btn {
+    scale: 0.5;
+  }
+  .btn ::before {
+    scale: 0.5;
+  }
+}
